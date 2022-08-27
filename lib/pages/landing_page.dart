@@ -74,7 +74,8 @@ class _LandingPageState extends State<LandingPage> {
 
   Future<Map<String, String>> getRequest() async {
     Map<String, String> jsonItems;
-    var response = await http.get(Uri.parse('https://zenquotes.io/api/today'));
+    var response = await http.get(Uri.parse(
+        'https://zenquotes.io/api/today/ab40fbb4af014130de52a6b0e3b7e2a980d1a12'));
     if (response.statusCode == 200) {
       String data = response.body;
       var responseData = jsonDecode(data);
